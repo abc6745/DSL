@@ -1,0 +1,60 @@
+def longest_word():
+	str=input("Enter string:")
+	li=str.split()
+	longest=max(li,key=len)
+	print(longest)
+
+def occurrance():
+	str=input("Enter string :")
+	char=input("Enter charactor:")
+	count=0
+	for i in range(len(str)):
+		if char==str[i]:
+			count=count+1
+	print(count)
+
+def pallindrome():
+	str=input("Enter string:")
+	str1=str.lower()
+	if(str1==str1[::-1]):
+		print("String is pallindrome")
+	else:
+		print("String is not pallindrome")
+
+def substring():
+	str=input("Enter string:")
+	subs=input("Enter sub string:")
+	if subs in str:
+	    print(str.find(subs))
+	else:
+	    print("string not present")
+
+def word_count():
+	str=input("Enter string:")
+	counts=dict()
+	words=str.split()
+	for i in words:
+		if i in counts:
+			counts[i]+=1
+		else:
+			counts[i]=1
+	print(counts)
+
+def main():
+    while True:
+        
+        print("1.longest\n2.occurance\n3.pllin\n4.subs\n5.word")
+        ch=int(input("effd"))
+        if(ch==1):
+            longest_word()
+        elif(ch==2):
+            occurrance()
+        elif(ch==3):
+            pallindrome()
+        elif(ch==4):
+            substring()
+        elif(ch==5):
+            word_count()
+        else:
+            break
+main()
